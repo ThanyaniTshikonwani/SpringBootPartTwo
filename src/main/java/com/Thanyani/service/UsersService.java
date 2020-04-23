@@ -9,7 +9,7 @@ import java.util.UUID;
 @Service
 public class UsersService {
     @Cacheable("Users")
-    public Users getUser(UUID id){
+    public Users getUser(long id){
         try
         {
             System.out.println("Going to sleep for 4 Secs.. to simulate backend call.");
@@ -19,7 +19,6 @@ public class UsersService {
         {
             e.printStackTrace();
         }
-
-        return new Users(id,"Thanyani" ,"Tshikonwani");
+        return new Users(1,"Thanyani" ,"Tshikonwani");
     }
 }

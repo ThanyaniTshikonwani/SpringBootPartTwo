@@ -3,14 +3,14 @@ package com.Thanyani.users;
 import java.util.UUID;
 
 public class Users {
-    private UUID id;
+    private long id;
     private  String name;
     private String surname;
 
 
 
 
-    public Users(UUID id, String name, String surname) {
+    public Users(long id, String name, String surname) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -20,7 +20,7 @@ public class Users {
         return String.valueOf(id);
     }
 
-    public void setId(UUID id) {
+    public void setId(long id) {
         this.id = id;
     }
 

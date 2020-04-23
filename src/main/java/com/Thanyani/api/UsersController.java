@@ -12,18 +12,18 @@ import java.util.UUID;
 @RestController
 public class UsersController {
 
+    @RequestMapping("/home")
+    public String message(){
+        return "Welcome to Spring Cache and Security";
+    }
 
     @Autowired
     UsersService usersService;
 
     @GetMapping("/users/{id}")
-    public Users findUserById(@PathVariable UUID id)
+    public Users findUserById(@PathVariable long id)
     {
         System.out.println("Searching by ID  : " + id);
-
         return usersService.getUser(id);
     }
-
-
-
 }
